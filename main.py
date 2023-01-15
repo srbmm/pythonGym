@@ -1,8 +1,10 @@
 from classes.Menu import Menu
+from classes.Gym import Gym
 
-test = Menu({
-    "gozie yek": lambda : print("yek"),
-    "gozine do": lambda : print("do"),
-    "gozine se": lambda :print("se")
+my_gym = Gym()
+my_app = Menu({
+    "add athlete to gym: ": my_gym.add,
+    "show all athlete: ": my_gym.print_all,
+    "find athlete: ": my_gym.find_and_print
 })
-test.run()
+my_app.run()

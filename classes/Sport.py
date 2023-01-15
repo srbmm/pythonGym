@@ -18,4 +18,4 @@ class Sport:
     @property
     def number(self):
         if self._name.lower() != "plank":
-            return self._time
+            return self._number

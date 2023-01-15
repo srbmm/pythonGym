@@ -1,10 +1,9 @@
-from Person import Athlete
-from Sport import Sport
+from classes.Sport import Sport
 from datetime import datetime, timedelta
 
 
 class Program:
-    def __init__(self, athlete: Athlete):
+    def __init__(self, athlete):
         # Data is not True because the goal is OOP.
         if athlete.age < 20:
             if athlete.weight <= 55:

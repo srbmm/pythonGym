@@ -1,4 +1,4 @@
-from Program import Program
+from classes.Program import Program
 
 
 class Person:

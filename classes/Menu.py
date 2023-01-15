@@ -6,7 +6,7 @@ class Menu:
     @property
     def _msg(self):
         counter = 1
-        temp = ""
+        temp = "\n\n"
         for key in self._data.keys():
             temp += f"{counter}.{key}\n"
             counter += 1
@@ -24,7 +24,7 @@ class Menu:
         counter = 1
         temp = {}
         for item in self._data.keys():
-            temp[counter] = item
+            temp[f"{counter}"] = item
             counter += 1
         return temp
 
@@ -36,7 +36,6 @@ class Menu:
                 break
             if inp == "exit":
                 break
-            inp = int(inp)
             if inp in self._choices.keys():
                 key = self._choices[inp]
                 self._data[key]()
