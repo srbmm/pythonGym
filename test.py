@@ -1,1 +1,4 @@
-print(len({1:2,3:4}))
+from datetime import datetime
+start = datetime.now()
+
+print(start.strftime("%y/%m/%d"))

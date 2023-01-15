@@ -1,3 +1,6 @@
+from Program import Program
+
+
 class Person:
     def __init__(self, name: str, sex: str, age: float, weight: float):
         self.name = name
