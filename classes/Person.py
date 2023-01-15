@@ -14,6 +14,3 @@ class Athlete(Person):
         super().__init__(*args, **kwargs)
         self.program = Program(self)
 
-
-test = Athlete("ali", "m", 17, 60, "test")
-test.print()
