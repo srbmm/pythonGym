@@ -8,8 +8,8 @@ class Gym:
     def add(self):
         name = input("Enter name: ")
         sex = input("Enter f for female and m for male: ")
-        age = float(input("Enter age: "))
-        weight = float(input("Enter weight: "))
+        age = float(input("Enter age(10 to 90): "))
+        weight = float(input("Enter weight(25 to 130): "))
         if 10 <= age <= 90 and 25 <= weight <= 130:
             athlete = Athlete(name, sex, age, weight)
             self.athletes.append(athlete)
@@ -23,13 +23,12 @@ class Gym:
 
     def find_and_print(self):
         finding = self.find(input("Enter name: "))
-        sex = ""
-        if finding.sex == "f":
-            sex = "Female"
-        elif finding.sex == "m":
-            sex = "Male"
-
         if finding is not None:
+            sex = ""
+            if finding.sex == "f":
+                sex = "Female"
+            elif finding.sex == "m":
+                sex = "Male"
             print(f"""
             ------------------------------------------
             name: {finding.name}
