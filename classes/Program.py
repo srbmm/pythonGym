@@ -56,8 +56,9 @@ class Program:
         self.start = datetime.now()
         self.day_list = []
         time = self.start
-        for i in range(10):
-            self.day_list.append(time.strftime("%y/%m/%d"))
+        session = int(input("Enter the number of session: "))
+        for i in range(session):
+            self.day_list.append(time.strftime("%y/%m/%d --- %A"))
             time += timedelta(days=3)
 
     def __str__(self):
